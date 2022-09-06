@@ -1,0 +1,11 @@
+<mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Registered Users</mat-card-title>
+    </mat-card-header>
+    <mat-card-content *ngFor="let v of visitors">
+        Name: {{v.name}} <br>
+        ContactPerson: {{v.contactPerson}} <br>
+        Company: {{v.company}} <br>
+        Mobile Number: {{v.mobile}} <br>
+    </mat-card-content>
+</mat-card>
