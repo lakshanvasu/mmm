@@ -5,30 +5,38 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HeaderComponent } from './header/header.component';
-import { MatToolbarModule } from '@angular/material/toolbar';
-import { AddVisitorComponent } from './add-visitor/add-visitor.component';
+import {MatToolbarModule} from '@angular/material/toolbar';
+
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSelectModule } from '@angular/material/select';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatCardModule } from '@angular/material/card';
-import { ReactiveFormsModule } from '@angular/forms';
-import { NavigationbarComponent } from './navigationbar/navigationbar.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MainheaderComponent } from './mainheader/mainheader.component';
 import { LayoutModule } from '@angular/cdk/layout';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import {MatExpansionModule} from '@angular/material/expansion';
-import { ShowVisitorComponent } from './show-visitor/show-visitor.component';
-import { FormsModule } from '@angular/forms';
-
+import { ShowvisitorComponent } from './showvisitor/showvisitor.component';
+import { AddvisitorComponent } from './addvisitor/addvisitor.component';
+import { HttpClientModule } from '@angular/common/http';
+import {  MatDialogModule } from '@angular/material/dialog';
+import { EditVisitorComponent } from './edit-visitor/edit-visitor.component';
+import {  MatGridListModule } from '@angular/material/grid-list';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    AddVisitorComponent,
-    NavigationbarComponent,
-    ShowVisitorComponent
+    MainheaderComponent,
+    ShowvisitorComponent,
+    AddvisitorComponent,
+    EditVisitorComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,
@@ -46,7 +54,11 @@ import { FormsModule } from '@angular/forms';
     MatIconModule,
     MatListModule,
     MatExpansionModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule,
+    MatDialogModule,
+    MatGridListModule
+    
   ],
   providers: [],
   bootstrap: [AppComponent]
